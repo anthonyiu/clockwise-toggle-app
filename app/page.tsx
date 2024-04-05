@@ -22,6 +22,7 @@ export default function Home() {
     if (savedData) {
       const { clockwise, roundShow, roundNumber } = JSON.parse(savedData);
       setIsClockwise(clockwise);
+      setIsRoundShow(roundShow);
       setRound(roundNumber);
     }
   }, []);
