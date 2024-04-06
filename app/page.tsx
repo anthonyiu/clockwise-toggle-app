@@ -30,11 +30,13 @@ export default function Home() {
   const { toast } = useToast();
 
   const iconTransition =
-    "transition-[transform,opacity] duration-300 ease-in-out";
-  const iconShow = "opacity-1 translate-y-0";
-  const iconHide = "opacity-0 translate-y-28 h-0";
+    "[transition:transform_500ms,opacity_1s] ease-in-out origin-bottom";
+  const iconShow = "opacity-1 rotate-360";
+  const iconHide = `opacity-0 h-0 ${
+    isClockwise ? "rotate-180" : "-rotate-180"
+  }`;
 
-  const badgeTransition = "transition-[opacity] duration-300 ease-in-out";
+  const badgeTransition = "transition-[opacity] duration-500 ease-in-out";
   const badgeShow = "opacity-1";
   const badgeHide = "opacity-0 h-0";
 
@@ -95,8 +97,8 @@ export default function Home() {
               <ModeToggle />
             </li>
           </ul>
-          <Toaster />
         </nav>
+        <Toaster />
       </header>
       <main className="flex-1 flex flex-col items-center justify-center p-2 gap-12">
         <button
