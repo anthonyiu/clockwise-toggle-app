@@ -30,7 +30,7 @@ export default function Home() {
   const { toast } = useToast();
 
   const iconTransition =
-    "[transition:transform_500ms,opacity_1s] ease-in-out origin-bottom";
+    "[transition:transform_500ms,opacity_1500ms] ease-in-out origin-bottom";
   const iconShow = "opacity-1 rotate-360";
   const iconHide = `opacity-0 h-0 ${
     isClockwise ? "rotate-180" : "-rotate-180"
